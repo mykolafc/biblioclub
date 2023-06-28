@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 2px solid #929292;
   background-color: #F0EED6;
   font-weight: 300;
 }
@@ -28,8 +28,25 @@
 .navbar a:hover {
   color: #f1356d;
 }
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+#homeBackgroundImage {
+  background-image: url("/assets/BookBackgroundBlurred.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  height: 400px;
+}
+.foregroundText {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  padding-top: 330px;
+}
+.home {
+  background-color: #F0EED6;
+}
+#homeText {
+  padding: 100px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: larger;
 }
