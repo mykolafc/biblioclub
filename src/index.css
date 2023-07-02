@@ -10,15 +10,18 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  border-bottom: 2px solid #929292;
-  background-color: #F0EED6;
+  background-color: #929292;
   font-weight: 300;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: white;
 }
-.navbar .links {
+.navbar h1:hover {
+  color: black;
+}
+.navbar a {
   margin-left: auto;
+  color: white;
 }
 .navbar a {
   margin-left: 16px;
@@ -26,10 +29,10 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: black;
 }
 #homeBackgroundImage {
-  background-image: url("/assets/BookBackgroundBlurred.png");
+  background-image: url("assets/BookBackgroundBlurred.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -42,11 +45,39 @@
   padding-top: 330px;
 }
 .home {
-  background-color: #F0EED6;
+  background-color: #DADADA;
 }
-#homeText {
-  padding: 100px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: larger;
+.Membres {
+  background-color: #DADADA;
+}
+.Footer {
+  background-color: #929292;
+}
+.book-preview {
+  padding: 10px 16px;
+  border: #A1F1E7;
+}
+.book-preview:hover {
+  box-shadow: 3px 3px 5px black;
+}
+.book-preview h2{
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+.cardImage {
+  width: min-content;
+  height: 15vw;
+  object-fit: cover;
+}
+.dropdownToggle {
+  color: #A1F1E7;
+}
+.voteCard {
+  width: '14rem'; 
+  padding: '1rem'; 
+  margin: '1rem 3rem';
+}
+.voteCard:hover {
+  cursor: pointer;
 }

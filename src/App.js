@@ -3,7 +3,9 @@ import Home from './Home';
 import Membres from './Membres';
 import Livre from './Livre';
 import Reunion from './Reunion';
-import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Vote from './Vote';
+import Footer from './Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
               <Route path='/membres' element={<Membres />}/>
               <Route path='/livre-du-mois' element={<Livre />}/>
               <Route path='/reunion' element={<Reunion />}/>
+              <Route path='/vote' element={<Vote />}/>
             </Routes>
           </div>
+          <Footer />
       </div>
     </Router>
   );

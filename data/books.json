@@ -1,0 +1,16 @@
+{
+    "books": [
+        {
+            "title": "Talking to Strangers",
+            "author": "Malcolm Gladwell",
+            "img": "./assets/TalkingToStrangers.jpeg",
+            "id": 1
+        },
+        {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "img": "./assets/DareToLead.jpeg",
+            "id": 2
+        }
+    ]
+}
