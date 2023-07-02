@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/biblioclub/static/css/main.04109c1f.css",
+    "main.js": "/biblioclub/static/js/main.4c6d003b.js",
+    "static/media/readingGroup.jpeg": "/biblioclub/static/media/readingGroup.b56043f4cf37e3980ab8.jpeg",
+    "static/media/BookBackgroundBlurred.png": "/biblioclub/static/media/BookBackgroundBlurred.113a2b9858be18d53d74.png",
+    "static/media/Surrender.jpeg": "/biblioclub/static/media/Surrender.c8c8f45e3d146c2ba9b2.jpeg",
+    "static/media/Storyteller.jpeg": "/biblioclub/static/media/Storyteller.7b581a2d73b99dce3f17.jpeg",
+    "static/media/DareToLead.jpeg": "/biblioclub/static/media/DareToLead.097e04ed57824b6381c6.jpeg",
+    "static/media/TalkingToStrangers.jpeg": "/biblioclub/static/media/TalkingToStrangers.f4759ce074aad27016f0.jpeg",
+    "index.html": "/biblioclub/index.html",
+    "main.04109c1f.css.map": "/biblioclub/static/css/main.04109c1f.css.map",
+    "main.4c6d003b.js.map": "/biblioclub/static/js/main.4c6d003b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04109c1f.css",
+    "static/js/main.4c6d003b.js"
+  ]
+}
