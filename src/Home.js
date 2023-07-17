@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
+import globe from './assets/globe.svg';
 
 const Home = () => {
     return ( 
         <div className="home">
             <div className="backgroundImage" id="homeBackgroundImage">
-                <h1 className="foregroundText" >Redécouvrez votre passion pour la lecture</h1>
+                <Row style={{float: "right"}}>
+                    <button style={{marginRight: "1rem"}}>
+                        <img src={globe} style={{height: "1rem"}}></img>
+                    </button>
+                </Row>
+                <Row>
+                    <h1 className="foregroundText">Redécouvrez votre amour pour la lecture</h1>
+                </Row>
             </div>
             <Row className='justify-content-md-center'>
                 <Col className="col-4">

@@ -5,6 +5,19 @@ import talkingToStrangers from './assets/TalkingToStrangers.jpeg';
 import dareToLead from './assets/DareToLead.jpeg';
 import storyteller from './assets/Storyteller.jpeg';
 import surrender from './assets/Surrender.jpeg';
+import blink from './assets/blink_malcom_gladwell.jpeg';
+import theTippingPoint from './assets/The-tipping-point.jpeg';
+import theBomberMafia from './assets/BomberMafia.jpeg';
+import hitchhiker from './assets/hitchhiker.jpeg';
+import princessBride from './assets/The-Princess-Bride.jpeg';
+import postmortal from './assets/postmortal.jpeg';
+import trial from './assets/the-trial.jpeg';
+import metamorphosis from './assets/metamorphosis.jpeg';
+import castle from './assets/the-castle.jpeg';
+import amerika from './assets/Amerika.png';
+import oms from './assets/the-old-man-and-the-sea-69.jpeg';
+import becoming from './assets/becoming.jpeg';
+
 
 const Vote = () => {
 
@@ -36,20 +49,109 @@ const Vote = () => {
             img: surrender,
             genre: "Autobiography",
             id: 4
-        }
+        },
+        {
+            title: "Blink",
+            author: "Malcolm Gladwell",
+            img: blink,
+            genre: "Self-Help",
+            id: 5
+        },
+        {
+            title: "The Tipping Point",
+            author: "Malcolm Gladwell",
+            img: theTippingPoint,
+            genre: "Self-Help",
+            id: 6
+        },
+        {
+            title: "The Bomber Mafia",
+            author: "Malcolm Gladwell",
+            img: theBomberMafia,
+            genre: "Self-Help",
+            id: 7
+        },
+        {
+            title: "The Hitchhiker's Guide to the Galaxy",
+            author: "Douglas Adams",
+            img: hitchhiker,
+            genre: "Science-Fiction Humour",
+            id: 8
+        },
+        {
+            title: "The Princess Bride",
+            author: "S. Morgenstern",
+            img: princessBride,
+            genre: "Fantasy Fiction Humour",
+            id: 9
+        },
+        {
+            title: "Postmortal",
+            author: "Drew Magary",
+            img: postmortal,
+            genre: "Science-Fiction Humour",
+            id: 10
+        },
+        {
+            title: "The Trial",
+            author: "Franz Kafka",
+            img: trial,
+            genre: "Absurdist Fiction",
+            id: 11
+        },
+        {
+            title: "The Metamorphosis",
+            author: "Franz Kafka",
+            img: metamorphosis,
+            genre: "Absurdist Fiction",
+            id: 12
+        },
+        {
+            title: "The Castle",
+            author: "Franz Kafka",
+            img: castle,
+            genre: "Absurdist Fiction",
+            id: 13
+        },
+        {
+            title: "Amerika",
+            author: "Franz Kafka",
+            img: amerika,
+            genre: "Absurdist Fiction",
+            id: 14
+        },
+        {
+            title: "The Old Man and the Sea",
+            author: "Ernest Hemingway",
+            img: oms,
+            genre: "Fiction",
+            id: 15
+        },
+        {
+            title: "Becoming",
+            author: "Michelle Obama",
+            img: becoming,
+            genre: "Autobiography Self-Help",
+            id: 16
+        },
     ]);
 
     const [selectedGenre, setSelectedGenre] = useState('All');
+    const [selectedAuthor, setSelectedAuthor] = useState('Any');
 
     const handleGenreChange = (genre) => {
         setSelectedGenre(genre);
     };
+    const handleAuthorChange = (author) => {
+        setSelectedAuthor(author);
+    }
 
     function handleClick() {
         alert("Vote received");
     }
 
-    let filteredCards = selectedGenre === 'All' ? books : books.filter(book => book.genre === selectedGenre);
+    let filteredGenreCards = selectedGenre === 'All' ? books : books.filter(book => book.genre.includes(selectedGenre));
+    let filteredCards = selectedAuthor === 'All' ? filteredGenreCards : filteredGenreCards.filter(book => book.author.includes(selectedAuthor));
 
 
     return (
@@ -57,18 +159,44 @@ const Vote = () => {
             <Row className='justify-content-center'>
                 <Col style={{textAlign: 'center'}}>
                     <h1 style={{marginTop: '3rem'}}>Explorez notre sélection</h1>
-                    <div className="mb-4">
-                        <Dropdown>
-                            <Dropdown.Toggle className='dropdownToggle'>
-                                Filtrer par Genre
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item active={selectedGenre === 'All'} onClick={() => handleGenreChange('All')}>All</Dropdown.Item>
-                                <Dropdown.Item active={selectedGenre === 'Self-Help'} onClick={() => handleGenreChange('Self-Help')}>Self-Help</Dropdown.Item>
-                                <Dropdown.Item active={selectedGenre === 'Autobiography'} onClick={() => handleGenreChange('Autobiography')}>Autobiography</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </div>
+                    <Row className="mb-4">
+                        <Col>
+                            <Dropdown>
+                                <Dropdown.Toggle className='dropdownToggle'>
+                                    Filtrer par Genre
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item active={selectedGenre === 'All'} onClick={() => handleGenreChange('All')}>Tous</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Autobiography'} onClick={() => handleGenreChange('Autobiography')}>Autobiographie</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Self-Help'} onClick={() => handleGenreChange('Self-Help')}>Bien-Être</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Fantasy'} onClick={() => handleGenreChange('Fantasy')}>Fantaisie</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Fiction'} onClick={() => handleGenreChange('Fiction')}>Fiction</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Humour'} onClick={() => handleGenreChange('Humour')}>Livres Humoristiques</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Science-Fiction'} onClick={() => handleGenreChange('Science-Fiction')}>Science-Fiction</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </Col>
+                        <Col>
+                            <Dropdown>
+                                <Dropdown.Toggle className='dropdownToggle'>
+                                    Filtrer par Auteur
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item active={selectedGenre === 'All'} onClick={() => handleAuthorChange('All')}>Tous</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Bono'} onClick={() => handleAuthorChange('Bono')}>Bono</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Brené Brown'} onClick={() => handleAuthorChange('Brené Brown')}>Brené Brown</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Dave Grohl'} onClick={() => handleAuthorChange('Dave Grohl')}>Dave Grohl</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Douglas Adams'} onClick={() => handleAuthorChange('Douglas Adams')}>Douglas Adams</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Drew Magary'} onClick={() => handleAuthorChange('Drew Magary')}>Drew Magary</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Ernest Hemingway'} onClick={() => handleAuthorChange('Ernest Hemingway')}>Ernest Hemingway</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Franz Kafka'} onClick={() => handleAuthorChange('Franz Kafka')}>Franz Kafka</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Malcolm Gladwell'} onClick={() => handleAuthorChange('Malcolm Gladwell')}>Malcolm Gladwell</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Michelle Obama'} onClick={() => handleAuthorChange('Michelle Obama')}>Michelle Obama</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'S. Morgenstern'} onClick={() => handleAuthorChange('S. Morgenstern')}>S. Morgenstern</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
             <Row>

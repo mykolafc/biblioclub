@@ -6,15 +6,18 @@ import Reunion from './Reunion';
 import Vote from './Vote';
 import Footer from './Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {useState} from 'react';
 
 function App() {
+
+
   return (
     <Router>
       <div className="App">
-          <Navbar />
+          <Navbar/>
           <div className="content">
             <Routes>
-              <Route path='/' element={<Home />}/>
+              <Route path='/home' element={<Home />}/>
               <Route path='/membres' element={<Membres />}/>
               <Route path='/livre-du-mois' element={<Livre />}/>
               <Route path='/reunion' element={<Reunion />}/>

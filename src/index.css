@@ -36,7 +36,8 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
-  height: 400px;
+  box-sizing: border-box;
+  height: 420px;
 }
 .foregroundText {
   text-align: center;
