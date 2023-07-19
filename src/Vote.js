@@ -137,7 +137,7 @@ const Vote = () => {
     ]);
 
     const [selectedGenre, setSelectedGenre] = useState('All');
-    const [selectedAuthor, setSelectedAuthor] = useState('Any');
+    const [selectedAuthor, setSelectedAuthor] = useState('All');
 
     const handleGenreChange = (genre) => {
         setSelectedGenre(genre);

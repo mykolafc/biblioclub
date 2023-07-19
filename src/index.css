@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
+/*
+#576E7D Dark Blue
+#C7E2F4 Light Blue
+#412891 Dark Purple
+#AD9CDF Light Purple
+*/
+
 * {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: #333;
 }
 .navbar {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  background-color: #929292;
+  padding: 20px 0px;
+  background-color: #576E7D;
   font-weight: 300;
 }
 .navbar h1 {
@@ -20,11 +24,7 @@
   color: black;
 }
 .navbar a {
-  margin-left: auto;
   color: white;
-}
-.navbar a {
-  margin-left: 16px;
   text-decoration: none;
   padding: 6px;
 }
@@ -36,7 +36,6 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
-  box-sizing: border-box;
   height: 420px;
 }
 .foregroundText {
@@ -46,13 +45,19 @@
   padding-top: 330px;
 }
 .home {
-  background-color: #DADADA;
+  background-color: #C7E2F4;
 }
 .Membres {
-  background-color: #DADADA;
+  background-color: #C7E2F4;
+}
+.Reunion {
+  background-color: #C7E2F4;
+}
+.Livre {
+  background-color: #C7E2F4;
 }
 .Footer {
-  background-color: #929292;
+  background-color: #576E7D;
 }
 .book-preview {
   padding: 10px 16px;
@@ -81,4 +86,42 @@
 }
 .voteCard:hover {
   cursor: pointer;
+}
+.navbar-container {
+  margin-right: 0;
+  margin-left: 0;
+  height: fit-content;
+}
+.navbar-row {
+  margin-right: -15px;
+  margin-left: -15px;
+  width: inherit;
+  height: fit-content;
+}
+#langButton {
+  border-color: white;
+  background-color: #576E7D;
+}
+#langButton:hover{
+  border-color: black;
+}
+#globe {
+  filter: brightness(0) invert(1)
+}
+#langButton:hover #globe{
+  filter: invert(0)
+}
+.readBookCard {
+  margin: 1rem 1rem 3rem;
+}
+.purbleBubble {
+  text-decoration: none;
+  margin: 3rem;
+  padding: 3rem;
+  border-style: solid;
+  border-color: #412891;
+  border-width: 3px;
+  border-radius: 40px;
+  background-color: #AD9CDF;
+  box-shadow: 3px 3px 4px black;
 }

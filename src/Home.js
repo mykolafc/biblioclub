@@ -1,31 +1,29 @@
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
-import globe from './assets/globe.svg';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+
+    const { t } = useTranslation();
+
     return ( 
         <div className="home">
             <div className="backgroundImage" id="homeBackgroundImage">
-                <Row style={{float: "right"}}>
-                    <button style={{marginRight: "1rem"}}>
-                        <img src={globe} style={{height: "1rem"}}></img>
-                    </button>
-                </Row>
                 <Row>
-                    <h1 className="foregroundText">Redécouvrez votre amour pour la lecture</h1>
+                    <h1 className="foregroundText">{t('welcome')}</h1>
                 </Row>
             </div>
             <Row className='justify-content-md-center'>
-                <Col className="col-4">
+                <Col className="col-4 d-flex align-items-center">
                     <div id="homeText">
-                        <p style={{margin: "3rem"}}>Le premier jeudi du mois, trouvez-nous <br/>dans le coin de lecture de votre succursale <br/>de la Bibliothèque publique d'Ottawa.</p>
+                        <h5 style={{margin: "3rem"}}>{t('homeText')}</h5>
                         <Link to="/"></Link>
                     </div>
                 </Col>
                 <Col className="col-4">
                     <Link to="/vote">
-                        <div style={{}}>
-                            <p style={{textDecoration: "none", margin: "3rem", padding: "3rem", borderStyle: "solid", borderColor: "black", borderWidth: "3px", borderRadius: "40px"}}>Votez sur le prochain livre du mois<br/>dès maintenant!</p>
+                        <div className='purbleBubble' id='voteBubble'>
+                            <h5>{t('vote')}</h5>
                         </div>
                     </Link>
                 </Col>
