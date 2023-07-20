@@ -8,8 +8,6 @@ import Footer from './Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import i18n from 'i18next';
 import { initReactI18next, I18nextProvider } from 'react-i18next';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 
 i18n.use(initReactI18next).init({

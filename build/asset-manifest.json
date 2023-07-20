@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.84401403.css",
-    "main.js": "/static/js/main.8a6d13de.js",
+    "main.js": "/static/js/main.f8d85573.js",
     "static/media/readingGroup.jpeg": "/static/media/readingGroup.b56043f4cf37e3980ab8.jpeg",
     "static/media/BookBackgroundBlurred.png": "/static/media/BookBackgroundBlurred.113a2b9858be18d53d74.png",
     "static/media/The-Princess-Bride.jpeg": "/static/media/The-Princess-Bride.fd91d098a41d80653702.jpeg",
@@ -32,10 +32,10 @@
     "static/media/globe.svg": "/static/media/globe.a8367c02c439f5ee8e30dde0d1e1057f.svg",
     "index.html": "/index.html",
     "main.84401403.css.map": "/static/css/main.84401403.css.map",
-    "main.8a6d13de.js.map": "/static/js/main.8a6d13de.js.map"
+    "main.f8d85573.js.map": "/static/js/main.f8d85573.js.map"
   },
   "entrypoints": [
     "static/css/main.84401403.css",
-    "static/js/main.8a6d13de.js"
+    "static/js/main.f8d85573.js"
   ]
 }

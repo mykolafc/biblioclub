@@ -9,7 +9,7 @@ const Livre = () => {
     const [showModal, setShowModal] = useState(false);
 
     const handleReserve = () => {
-        if(localStorage.getItem('reserved') == 'true'){
+        if(localStorage.getItem('reserved') === 'true'){
             alert(t('reserved'));
         }
         else{
