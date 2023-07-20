@@ -93,7 +93,7 @@ const Reunion = () => {
                         <option value={locales[27]}>Vernon</option>
                     </Form.Select>
                     <div id="googleMap" className='d-flex flex-column align-items-center'>
-                        <iframe src={locale} width="500" height="250" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src={locale} title='branchMap' width="500" height="250" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </Col>
             </Row>

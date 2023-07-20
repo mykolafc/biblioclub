@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Row , Col , Card , Dropdown , Form } from 'react-bootstrap';
+import { Row , Col , Card , Dropdown } from 'react-bootstrap';
 
 import talkingToStrangers from './assets/TalkingToStrangers.jpeg';
 import dareToLead from './assets/DareToLead.jpeg';
@@ -24,7 +24,7 @@ const Vote = () => {
 
     const { t } = useTranslation()
 
-    const [books, setBooks] = useState([
+    const books = [
         {
             title: "Talking to Strangers", 
             author: "Malcolm Gladwell", 
@@ -137,7 +137,7 @@ const Vote = () => {
             genre: "Autobiography Self-Help",
             id: 16
         },
-    ]);
+    ];
 
     const [selectedGenre, setSelectedGenre] = useState('All');
     const [selectedAuthor, setSelectedAuthor] = useState('All');
@@ -150,7 +150,7 @@ const Vote = () => {
     }
 
     function handleClick() {
-        if(localStorage.getItem('voted') == 'true'){
+        if(localStorage.getItem('voted') === 'true'){
             alert(t('vone'));
         }
         else{

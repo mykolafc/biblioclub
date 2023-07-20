@@ -65,7 +65,7 @@ const Membres = () => {
         <div className="Membres">
            <Row>
                 <Col className='col-5' style={{overflow: "hidden"}}>
-                    <img src={require('./assets/readingGroup.jpeg')} alt="image of local reading group" style={{width: "100%", height:"100%", objectFit: "cover", filter: "blur(4px)"}}/>
+                    <img src={require('./assets/readingGroup.jpeg')} alt="local reading group" style={{width: "100%", height:"100%", objectFit: "cover", filter: "blur(4px)"}}/>
                 </Col>
                 <Col className='col-7' style={{margin: "3rem 0"}}>
                     <Row>
