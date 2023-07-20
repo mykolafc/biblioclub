@@ -17,9 +17,12 @@ import castle from './assets/the-castle.jpeg';
 import amerika from './assets/Amerika.png';
 import oms from './assets/the-old-man-and-the-sea-69.jpeg';
 import becoming from './assets/becoming.jpeg';
+import { useTranslation } from 'react-i18next';
 
 
 const Vote = () => {
+
+    const { t } = useTranslation()
 
     const [books, setBooks] = useState([
         {
@@ -147,7 +150,13 @@ const Vote = () => {
     }
 
     function handleClick() {
-        alert("Vote received");
+        if(localStorage.getItem('voted') == 'true'){
+            alert(t('vone'));
+        }
+        else{
+            alert(t('vrec'));
+            localStorage.setItem('voted', 'true');
+        }
     }
 
     let filteredGenreCards = selectedGenre === 'All' ? books : books.filter(book => book.genre.includes(selectedGenre));
@@ -158,20 +167,20 @@ const Vote = () => {
         <div className="vote">
             <Row className='justify-content-center'>
                 <Col style={{textAlign: 'center'}}>
-                    <h1 style={{marginTop: '3rem'}}>Explorez notre sélection</h1>
+                    <h1 style={{marginTop: '3rem'}}>{t('explore')}</h1>
                     <Row className="mb-4">
                         <Col>
                             <Dropdown>
                                 <Dropdown.Toggle className='dropdownToggle'>
-                                    Filtrer par Genre
+                                    {t('genre')}
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
-                                    <Dropdown.Item active={selectedGenre === 'All'} onClick={() => handleGenreChange('All')}>Tous</Dropdown.Item>
-                                    <Dropdown.Item active={selectedGenre === 'Autobiography'} onClick={() => handleGenreChange('Autobiography')}>Autobiographie</Dropdown.Item>
-                                    <Dropdown.Item active={selectedGenre === 'Self-Help'} onClick={() => handleGenreChange('Self-Help')}>Bien-Être</Dropdown.Item>
-                                    <Dropdown.Item active={selectedGenre === 'Fantasy'} onClick={() => handleGenreChange('Fantasy')}>Fantaisie</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'All'} onClick={() => handleGenreChange('All')}>{t('all')}</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Autobiography'} onClick={() => handleGenreChange('Autobiography')}>{t('abio')}</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Self-Help'} onClick={() => handleGenreChange('Self-Help')}>{t('shelp')}</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Fantasy'} onClick={() => handleGenreChange('Fantasy')}>{t('fantasy')}</Dropdown.Item>
                                     <Dropdown.Item active={selectedGenre === 'Fiction'} onClick={() => handleGenreChange('Fiction')}>Fiction</Dropdown.Item>
-                                    <Dropdown.Item active={selectedGenre === 'Humour'} onClick={() => handleGenreChange('Humour')}>Livres Humoristiques</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'Humour'} onClick={() => handleGenreChange('Humour')}>{t('funny')}</Dropdown.Item>
                                     <Dropdown.Item active={selectedGenre === 'Science-Fiction'} onClick={() => handleGenreChange('Science-Fiction')}>Science-Fiction</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
@@ -179,10 +188,10 @@ const Vote = () => {
                         <Col>
                             <Dropdown>
                                 <Dropdown.Toggle className='dropdownToggle'>
-                                    Filtrer par Auteur
+                                    {t('author')}
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
-                                    <Dropdown.Item active={selectedGenre === 'All'} onClick={() => handleAuthorChange('All')}>Tous</Dropdown.Item>
+                                    <Dropdown.Item active={selectedGenre === 'All'} onClick={() => handleAuthorChange('All')}>{t('all')}</Dropdown.Item>
                                     <Dropdown.Item active={selectedGenre === 'Bono'} onClick={() => handleAuthorChange('Bono')}>Bono</Dropdown.Item>
                                     <Dropdown.Item active={selectedGenre === 'Brené Brown'} onClick={() => handleAuthorChange('Brené Brown')}>Brené Brown</Dropdown.Item>
                                     <Dropdown.Item active={selectedGenre === 'Dave Grohl'} onClick={() => handleAuthorChange('Dave Grohl')}>Dave Grohl</Dropdown.Item>
@@ -202,9 +211,9 @@ const Vote = () => {
             <Row>
                 <div className="card-container justify-content-center" style={{ display: "flex", flexWrap: "wrap" }}>
                     {filteredCards.map((card) => (
-                        <Card className='voteCard' key={card.id} style={{ width: '14rem', padding: '1rem', margin: '1rem 3rem'}} onClick={handleClick} >
+                        <Card className='voteCard' key={card.id} style={{ width: '14rem', padding: '1rem', margin: '1rem 3rem', backgroundColor: "#AD9CDF", boxShadow: "3px 3px 4px black"}} onClick={handleClick} >
                             <Card.Img src={ card.img }/>
-                            <Card.Body>
+                            <Card.Body style={{backgroundColor: "#AD9CDF"}}>
                                 <Card.Title style={{fontWeight: 'bold'}}>{card.title}</Card.Title>
                                 <Card.Text style={{fontStyle: 'italic'}}>{card.author}</Card.Text>
                                 <Card.Text className="ratings" >{card.ratingsUsers}</Card.Text>

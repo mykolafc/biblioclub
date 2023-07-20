@@ -47,6 +47,9 @@
 .home {
   background-color: #C7E2F4;
 }
+.vote {
+  background-color: #C7E2F4;
+}
 .Membres {
   background-color: #C7E2F4;
 }
@@ -58,6 +61,10 @@
 }
 .Footer {
   background-color: #576E7D;
+}
+.Login {
+  background-color: #AD9CDF;
+  border: 4px solid #412891
 }
 .book-preview {
   padding: 10px 16px;
@@ -99,7 +106,7 @@
   height: fit-content;
 }
 #langButton {
-  border-color: white;
+  border: 2px solid white;
   background-color: #576E7D;
 }
 #langButton:hover{
@@ -113,6 +120,7 @@
 }
 .readBookCard {
   margin: 1rem 1rem 3rem;
+  box-shadow: 3px 3px 4px black;
 }
 .purbleBubble {
   text-decoration: none;
@@ -124,4 +132,15 @@
   border-radius: 40px;
   background-color: #AD9CDF;
   box-shadow: 3px 3px 4px black;
+}
+#googleMap {
+  margin: 1.5rem;
+}
+#loginButton {
+  background-color: #576E7D;
+  border: 2px solid white;
+}
+#loginButton:hover {
+  color: black;
+  border-color: black;
 }
